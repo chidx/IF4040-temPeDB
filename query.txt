@@ -1,0 +1,35 @@
+yang belum diimplementasi :
+    operator --, ++, <@
+
+contoh query :
+	
+SELECT * FROM gajiPegawai
+SELECT Nama FROM gajiPegawai
+SELECT Nama, Gaji FROM gajiPegawai
+SELECT ID, Nama, Gaji FROM gajiPegawai
+SELECT * FROM gajiPegawai WHERE ID = 5
+SELECT * FROM gajiPegawai WHEN time == (300,500)
+SELECT * FROM gajiPegawai WHERE ID = 5 WHEN time != (800,999)
+SELECT * FROM gajiPegawai WHERE ID = 5 WHEN time != [800,999]
+SELECT * FROM gajiPegawai WHERE ID = 5 WHEN time != [800,999)
+SELECT * FROM gajiPegawai WHERE ID = 5 WHEN time != (800,999]
+SELECT * FROM gajiPegawai WHERE ID = 5 WHEN time != (300,500)
+SELECT * FROM gajiPegawai WHERE ID = 5 WHEN time != (300,500)
+SELECT * FROM gajiPegawai WHERE ID = 5 WHEN time != (300,500)
+SELECT * FROM gajiPegawai WHERE ID = 5 WHEN time != (300,500)
+SELECT * FROM gajiPegawai WHERE ID = 5 WHEN time != (300,500)
+SELECT * FROM gajiPegawai WHERE ID = 5 WHEN time != (300,500)
+
+
+period == period → equals(period, period) v
+period != period → nequals(period, period) v
+period -- period → minus(period, period)
+period ++ period → union(period, period)
+period @> period → contains(period, period) v
+period @> timestamptz → contains(period, timestamptz) v
+period <@ period → contained_by(period, period)
+period && period → overlaps(period, period) v
+period << period → before(period, period) v
+period >> period → after(period, period) v
+period &< period → overleft(period, period) v
+period &> period → overright(period, period) v
